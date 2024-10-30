@@ -53,7 +53,7 @@ function processarDados(dados) {
     }
 
     criarGrafico(data, layout)
-    incluirTexto(``)
+    incluirTexto(`Essas bebidas refletem a diversidade cultural do Brasil e fazem parte das celebrações e da vida cotidiana!`)
 }
 
 redesSociaisFavoritasMinhaEscola()
