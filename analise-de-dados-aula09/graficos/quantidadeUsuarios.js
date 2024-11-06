@@ -4,8 +4,8 @@ async function quantidadeUsuariosPorRede() {
     const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json'
     const res = await fetch(url)
     const dados = await res.json()
-    const nomeDasRedes = Object.keys(dados)
-    const quantidadeDeUsuarios = Object.values(dados)
+    const nomeDasRedes = ['Outback Stakhouse', 'Coco bambu', 'Madero', 'Fogo de chão', 'Ráscal']
+    const quantidadeDeUsuarios = ['99', '80', '60', '50', '40']
 
     const data = [
         {
@@ -22,7 +22,7 @@ async function quantidadeUsuariosPorRede() {
         plot_bgcolor: getCSS('--bg-color'),
         paper_bgcolor: getCSS('--bg-color'),
         title: {
-            text: 'Redes sociais com mais usuários no mundo',
+            text: 'Restaurantes mais frequentados do Brasil',
             x: 0,
             font: {
                 color: getCSS('--primary-color'),
@@ -33,7 +33,7 @@ async function quantidadeUsuariosPorRede() {
         xaxis: {
             tickfont: tickConfig,
             title: {
-                text: 'nome das redes sociais',
+                text: 'restaurantes',
                 font: {
                     color: getCSS('--secondary-color')
                 }
@@ -42,7 +42,7 @@ async function quantidadeUsuariosPorRede() {
         yaxis: {
             tickfont: tickConfig,
             title: {
-                text: 'bilhões de usuários ativos',
+                text: '',
                 font: {
                     color: getCSS('--secondary-color')
                 }
